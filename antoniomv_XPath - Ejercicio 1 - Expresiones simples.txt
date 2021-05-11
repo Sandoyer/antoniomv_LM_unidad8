@@ -1,0 +1,33 @@
+Antonio MV
+
+Ejercicio 1-1: Nombre del instituto
+/ies/nombre
+
+Ejercicio 1-2: Página web del instituto
+/ies/web
+
+Ejercicio 1-3: Nombre de los Ciclos Formativos
+//ciclo/nombre/text()
+
+Ejercicio 1-4: Siglas por las que se conocen los Ciclos Formativos:
+/ies/ciclos/ciclo/@id
+//ciclo/@*
+
+Ejercicio 1-5: Años en los que se publicaron los decretos de título de los Ciclos Formativos:
+//@año
+//ciclo/decretoTitulo/@*
+
+Ejercicio 1-6: Ciclos Formativos de Grado Medio (se trata de obtener el elemento <ciclo> completo):
+//ciclo[grado="Medio"]
+
+Ejercicio 1-7: Nombre de los Ciclos Formativos de Grado Superior:
+//ciclo[grado="Superior"]
+//ciclo[grado="Superior"]/nombre
+
+Ejercicio 1-8: Nombre de los Ciclos Formativos anteriores a 2010:
+//decretoTitulo[@año<2010]/../nombre
+/ies/ciclos/ciclo/decretoTitulo[@año<2010]/../nombre
+
+Ejercicio 1-9: Nombre de los Ciclos Formativos de 2008 o 2010:
+//decretoTitulo[@año=2008 or @año=2010]/../nombre
+/ies/ciclos/ciclo/decretoTitulo[@año=2008 or @año=2010]/../nombre
